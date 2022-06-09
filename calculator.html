@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>calculator</title>
+    <script src="jquery/CBxmcMMf"></script>
+</head>
+
+<body >
+
+
+    <table border="1" id="tbl">
+      
+        
+        <tr>
+            <td colspan="4" height="20px" bgcolor=#557788  id="first"></td>
+        </tr>
+
+        <tr>
+            <td bgcolor="red"><input type="button" value="1" onclick="ali(1)" id="num"></td>
+            <td bgcolor="red"><input type="button" value="2"  onclick="ali(2)"></td>
+            <td bgcolor="red"><input type="button" value="3"  onclick="ali(3)"></td>
+            <td bgcolor="red"><input type="button" value="+"  onclick="ali('+')"></td>
+        </tr>
+
+        <tr>
+            <td bgcolor="red"><input type="button" value="4"  onclick="ali(4)"></td>
+            <td bgcolor="red"><input type="button" value="5"  onclick="ali(5)"></td>
+            <td bgcolor="red"><input type="button" value="6"  onclick="ali(6)"></td>
+            <td bgcolor="red"><input type="button" value="–"  onclick="ali('-')"></td>
+        </tr>
+
+        <tr>
+            <td bgcolor="red"><input type="button" value="7"  onclick="ali(7)"></td>
+            <td bgcolor="red"><input type="button" value="8"  onclick="ali(8)"></td>
+            <td bgcolor="red"><input type="button" value="9"  onclick="ali(9)"></td>
+            <td bgcolor="red"><input type="button" value="×"  onclick="ali('*')"></td>
+        </tr>
+
+        <tr>
+            <td bgcolor="red"><input type="button" value="c"  onclick="aclear()" id="clear" ></td>
+            <td bgcolor="red"><input type="button" value="0"  onclick="ali(0)"></td>
+            <td bgcolor="red"><input type="button" value="÷"  onclick="ali('/')"></td>
+            <td bgcolor="red"><input type="button" value="="  onclick="af()"></td>
+        </tr>
+</table>
+
+<script>
+
+    function ali(n) {
+        var x = document.getElementById('first').innerHTML;
+        document.getElementById('first').innerHTML = x + n;
+    }
+
+    function af(n) {
+        var x = document.getElementById('first').innerHTML;
+        document.getElementById('first').innerHTML = eval(x);
+    }
+
+    function aclear(){
+        document.getElementById('first').innerHTML="";
+    }
+
+</script>
+</body>
+</html>
